@@ -40,12 +40,12 @@ __3.1__ 根据你所在的目录，执行
 
 
 ##Resource
-[Laravel英文官网](http://laravel.com/)
-[Composer](https://getcomposer.org/)
-[Laravel China](http://laravel-china.org/)
-[Laravel中国社区](http://www.golaravel.com/)
-[The PHP Framework For Web Artisans](http://laravel.com/)
-[Laravel5 API](http://laravel.com/api/5.0/)
+[Laravel英文官网](http://laravel.com/)  
+[Composer](https://getcomposer.org/)  
+[Laravel China](http://laravel-china.org/)  
+[Laravel中国社区](http://www.golaravel.com/)  
+[The PHP Framework For Web Artisans](http://laravel.com/)  
+[Laravel5 API](http://laravel.com/api/5.0/)  
 
 ***
 ashucn@gmail.com
