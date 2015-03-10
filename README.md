@@ -1,4 +1,5 @@
 ![Laravel](http://www.easysitenetwork.com/wp-content/uploads/2013/02/learninglaravel.png) 
+
 [The PHP Framework For Web Artisans](http://laravel.com/)  
 
 -------------------
@@ -43,3 +44,10 @@ __3.1__ 根据你所在的目录，执行
 [Composer](https://getcomposer.org/)
 [Laravel China](http://laravel-china.org/)
 [Laravel中国社区](http://www.golaravel.com/)
+=======
+[The PHP Framework For Web Artisans](http://laravel.com/)
+
+[Laravel5 API](http://laravel.com/api/5.0/)
+
+***
+ashucn@gmail.com
