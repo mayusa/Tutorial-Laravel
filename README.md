@@ -42,7 +42,8 @@ __3.1 Installation__
 或者 可以使用**composer**创建： 
 (第一次创建项目会下载很多依赖包可能有点慢，以后建项目会从缓存中读取依赖包会比较块)  
   
->\> composer create-project laravel/laravel your-project-name dev-develop --prefer-dist
+>\> composer create-project laravel/laravel your-project-name dev-develop --prefer-dist  
+
 ##  
 __3.2 Artisan(本义：工匠）__
 ```
