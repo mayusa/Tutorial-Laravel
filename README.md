@@ -9,7 +9,14 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
 ###1.开发环境需求
 1．PHP(PHP>=5.4  and extensions: Mcrypt, OpenSSL,Mbstring,Tokenizer)  
     - 在 PHP 5.5 之后， 有些操作系统需要手动安装 PHP JSON 扩展包。如果你是使用 Ubuntu，可以通过 apt-get install php5-json 来进行安装
+    - 为了方便开发，最省事的安装扩展的方法就是，下载[xampp](https://www.apachefriends.org/download.html), 将xampp的php路径加到用户环境变量`~/.bash_profile`。这样所有所需的php扩展基本都全了。省去折腾安装扩展的烦恼~！
 2．[Composer](https://getcomposer.org/)
+```
+mac 安装 composer方法：  
+> curl -sS https://getcomposer.org/installer | php
+> mv composer.phar /usr/local/bin/composer  
+Then, just run "composer" in order to run Composer instead of "php composer.phar".
+```
 3．Web server
 4．资料库 (与Client App)
 5．IDE, source control
@@ -46,14 +53,15 @@ __3.1 Installation__
 
 ##  
 __3.2 Artisan(本义：工匠）__
-```
-$php artisan {command}
-``` 
+> $php artisan {command}   
+
 Laravel 专属指令工具，协助完成日常繁琐工作事务，比如：  
 - 产生auto-load, 清快取，最佳化
 - 产生migration, 控制queue
 - 维护模式
 
+####启动web server
+> php artisan **serve**  
 
 
 ##Resource
