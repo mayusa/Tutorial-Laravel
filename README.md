@@ -68,10 +68,12 @@ Laravel 专属指令工具，协助完成日常繁琐工作事务，比如：
 
 #####启动web server  
 
-> $ php artisan **serve**   
+> $ php artisan **serve**    
+
 #####关闭web server  
 
-> $ Ctrl + c  
+> $ Ctrl + c   
+
 #####启动 application  
 
 > $ php artisan up
