@@ -28,9 +28,10 @@ Then, just run "composer" in order to run Composer instead of "php composer.phar
 
 ###2.建立开发环境
 ---
-**2.1 All in one 套件( beginner )**
-**2.2 Homestead(熟悉laravel)**
-**2.3 自建开发环境 (advanced)**
+**2.1 All in one 套件( beginner )**  
+**2.2 Homestead(熟悉laravel)**  
+**2.3 自建开发环境 (advanced)**  
+ 
 
 ###[install Laravel](http://laravel.com/docs/5.0/installation)
 >\> composer global require "laravel/installer=~1.1"
