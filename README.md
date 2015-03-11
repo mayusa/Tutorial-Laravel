@@ -173,8 +173,10 @@ Created Migration: 2015_03_11_201816_create_articles_table
 [The PHP Framework For Web Artisans](http://laravel.com/)  
 [Laravel5 API](http://laravel.com/api/5.0/)  
 [Composer中国镜像](http://pkg.phpcomposer.com/)  
-[Laravel5系列入门教程](http://www.golaravel.com/post/laravel-5-getting-started-part-1/)
-[Laravel 4.x & 5.x中文离线文档](http://www.golaravel.com/post/laravel-documents-offline-package/)
+[Laravel5系列入门教程](http://www.golaravel.com/post/laravel-5-getting-started-part-1/)  
+
+[Laravel 4.x & 5.x中文离线文档](http://www.golaravel.com/post/laravel-documents-offline-package/)  
+
 [深入理解Laravel Eloquent](http://lvwenhan.com/laravel/421.html)  
 
 ***
