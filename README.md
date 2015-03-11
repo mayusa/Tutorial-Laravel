@@ -66,19 +66,25 @@ Laravel 专属指令工具，协助完成日常繁琐工作事务，比如：
 - 产生migration, 控制queue
 - 维护模式
 
-#####启动web server
+#####启动web server  
+
 > $ php artisan **serve**   
-#####关闭web server
+#####关闭web server  
+
 > $ Ctrl + c  
-#####启动 application
+#####启动 application  
+
 > $ php artisan up
-> Application is now live.
+> Application is now live.  
+
 #####暂停 application(首页显示: 'Be right back.')
 > $ php artisan down
-Application is now in maintenance mode.  
+Application is now in maintenance mode.    
+
 #####生成key
 > $ php artisan key:generate
-Application key [5ed1UVo4*************RlNjBWFo] set successfully.  
+Application key [5ed1UVo4*************RlNjBWFo] set successfully.    
+
 #####修改app名称
 > php artisan app:name yourAppName
 Application namespace set!  
@@ -155,7 +161,7 @@ Created Migration: 2015_03_11_201816_create_articles_table
 
 
 
-
+(not finished..)
 ###Resource
 ---
 [Laravel英文官网](http://laravel.com/)  
