@@ -7,28 +7,30 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
 -------------------
 
 ###1.开发环境需求
-1．PHP(PHP>=5.4  and extensions: Mcrypt, OpenSSL,Mbstring,Tokenizer)  
+---
+**1.1 PHP**(PHP>=5.4  and extensions: Mcrypt, OpenSSL,Mbstring,Tokenizer)  
 
 - 在 PHP 5.5 之后， 有些操作系统需要手动安装 PHP JSON 扩展包。如果你是使用 Ubuntu，可以通过 apt-get install php5-json 来进行安装  
 
 - 为了方便开发，最省事的安装扩展的方法就是，下载[xampp](https://www.apachefriends.org/download.html), 将xampp的php路径加到用户环境变量`~/.bash_profile`。这样所有所需的php扩展基本都全了。省去折腾安装扩展的烦恼~！  
 
-2．[Composer](https://getcomposer.org/)
+**1.2 [Composer](https://getcomposer.org/)**
 ```
 mac 安装 composer方法：  
 > curl -sS https://getcomposer.org/installer | php
 > mv composer.phar /usr/local/bin/composer  
 Then, just run "composer" in order to run Composer instead of "php composer.phar".
 ```
-3．Web server
-4．资料库 (与Client App)
-5．IDE, source control
-6．Web browser
+**1.3 Web server**
+**1.4 资料库 (与Client App)**
+**1.5 IDE, source control**
+**1.6 Web browser**
 
 ###2.建立开发环境
-1．All in one 套件( beginner )
-2．Homestead(熟悉laravel)
-3．自建开发环境 (advanced)
+---
+**2.1 All in one 套件( beginner )**
+**2.2 Homestead(熟悉laravel)**
+**2.3 自建开发环境 (advanced)**
 
 ###[install Laravel](http://laravel.com/docs/5.0/installation)
 >\> composer global require "laravel/installer=~1.1"
@@ -40,7 +42,7 @@ add ` ~/.composer/vendor/bin` directory to PATH (Linux)
 >\> laravel -v
 
 ###3.创建项目  
-
+---
 __3.1 Installation__  
 
 根据你所在的目录，执行**laravel**
@@ -67,7 +69,8 @@ Laravel 专属指令工具，协助完成日常繁琐工作事务，比如：
 > php artisan **serve**  
 
 
-##Resource
+###Resource
+---
 [Laravel英文官网](http://laravel.com/)  
 [Composer](https://getcomposer.org/)  
 [Laravel China](http://laravel-china.org/)  
