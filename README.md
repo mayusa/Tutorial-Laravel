@@ -6,6 +6,15 @@
 Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构，大量使用Symfony元件。
 -------------------
 
+目录：  
+1.开发环境需求
+2.[建立开发环境](https://github.com/mayusa/laravel#2%E5%BB%BA%E7%AB%8B%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)  
+3.[创建和管理项目](https://github.com/mayusa/laravel#3%E5%88%9B%E5%BB%BA%E5%92%8C%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE)
+
+
+
+
+
 ###1.开发环境需求
 ---
 **1.1 PHP**(PHP>=5.4  and extensions: Mcrypt, OpenSSL,Mbstring,Tokenizer)  
