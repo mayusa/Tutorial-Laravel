@@ -105,17 +105,23 @@ Application key [5ed1UVo4*************RlNjBWFo] set successfully.
 Application namespace set!  
 
   执行完这个命令之后, app/ 目录下的所有类都被归入 "yourAppName" 命名空间下. composer.json 文件里的 PSR-4 自动加载语句会自动更新, Laravel 也清楚应该在哪里去寻找该命名空间下的 filters, controlers 等
-####3.3 Configuration 配置Laravel
+####3.3 Configuration 配置Laravel  
+
 #####- `/app/comfig/{config}.php` :  
 
   - **app.php** (debug mode, service provider...)
   - **database.php** (mysql...)
   - **mail.php** (gmail, mailgun...)
-  - **queue.php** (beanstalkd...)
+  - **queue.php** (beanstalkd...)  
+
 #####- 服务器的root指向`/public`  
+
 #####- 开发流程： 代码统一由`github`来控制,不管是在本地还是取出远程代码，复制`/config`下所有文件即可完成对laravel配置   
-#####- Laravel自动监测环境： `/bootstrap/start.php`
-#####- Laravel环境配置：  
+
+#####- Laravel自动监测环境： `/bootstrap/start.php`  
+
+#####- Laravel环境配置：   
+
 Laravel 通过 [DotEnv](https://github.com/vlucas/phpdotenv) Vance Lucas 写的一个 PHP 类库。 在全新安装好的 Laravel 里，你的应用程序的根目录下会包含一个 `.env.example` 文件。如果你通过 Composer 安装 Laravel，这个文件将自动被命名为 `.env`，不然你应该手动更改文件名。  
 **注意：** `.env` 文件不应该被提交到应用程序的版本控制系统，因为每个开发人员或服务器使用你的应用程序可能需要不同的环境配置。  
 
@@ -136,6 +142,7 @@ DB_PASSWORD=password
 ```
 
 ####3.4 Migration (适合多人开发的数据库管理) 
+Represent database schema changes in code
 目录： /database/migrations/***_table.php
 `public function up()`
 >$ php artisan migrate
@@ -276,8 +283,22 @@ Migrated: 2015_03_11_201816_create_articles_table
     - 10条随机mock数据将保存在数据库中  
 
 
+####3.7 Route  
+/app/Http/routes.php
 
 
+
+####3.8 View  
+/resources/views/{view}.blade.php  
+
+
+
+####3.9 Controller  
+> $php artisan make:controller Admin/AdminHomeController  
+
+得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
+
+/resources/views/{view}.blade.php
 
 (not finished..)  
   
