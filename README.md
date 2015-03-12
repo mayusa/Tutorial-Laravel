@@ -295,16 +295,48 @@ Migrated: 2015_03_11_201816_create_articles_table
 
 
 ####3.9 Controller  
-路径：/app/Http/Controllers/{controller}.php  
+ - 路径：/app/Http/Controllers/{controller}.php  
 ```
 优点：  
-  -  将复杂的操作逻辑，从Route 搬到Controller以Class的方式进行分类，方便维护   
-  -  Controller本身即IoC Container(反转控制),可自动DI(Dependency injection依赖注入) 
-``` 
-#####生成Controller方法：  
+  -  将复杂的操作逻辑，从Route分流到Controllers以Class的方式进行分类，方便维护   
+  -  Controller本身即IoC Container(反转控制),可自动DI(依赖注入) 
+```  
+
+  - 生成Controller方法：  
 > $php artisan make:controller Admin/AdminHomeController  
 
-得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
+	得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
+
+#####[ 代码范例 ]  
+
+ - 修改route (/app/Http/routes.php)  
+```
+// 创建一个路由组。
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
+{
+  Route::get('/', 'AdminHomeController@index');
+});
+```  
+
+ - 编辑controller (/app/Http/Controllers/HomeController.php)  
+```
+..
+```
+  
+
+
+####3.9 Package
+	- 概念同Symfony的Bundle, Rails的Gem, Node的npm
+	- Laravel的扩充，通过package可以直接使用现成的功能，加快开发速度
+	- package搜索: Laravel Packages Registry; Packalyst  
+#####安装使用步骤：
+ - Readme
+ - 调整 composer.json/composer update
+ - 设定ServiceProvider / Alias
+ - Publish设定(视需求)
+ - Migrate DB (视需求)  
+
+
 
 
 (not finished..)  
@@ -324,6 +356,10 @@ Migrated: 2015_03_11_201816_create_articles_table
 [Laravel 4.x & 5.x中文离线文档](http://www.golaravel.com/post/laravel-documents-offline-package/)   
 [深入理解Laravel Eloquent](http://lvwenhan.com/laravel/421.html)   
 [PHP 5.6 SSL certificate verification 问题解决](http://www.tuicool.com/articles/YnqMviE)
+[离线文档工具 devdocs.io](http://devdocs.io/offline)  
+[离线文档工具 dash](http://kapeli.com/dash)  
+[laracasts 教学视频](https://laracasts.com/)  
+[tut+ 教学视频](http://tutsplus.com)   
 
 ***
 ashucn@gmail.com
