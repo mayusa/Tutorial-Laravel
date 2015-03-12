@@ -125,8 +125,8 @@ Application namespace set!
 Laravel 通过 [DotEnv](https://github.com/vlucas/phpdotenv) Vance Lucas 写的一个 PHP 类库。 在全新安装好的 Laravel 里，你的应用程序的根目录下会包含一个 `.env.example` 文件。如果你通过 Composer 安装 Laravel，这个文件将自动被命名为 `.env`，不然你应该手动更改文件名。  
 **注意：** `.env` 文件不应该被提交到应用程序的版本控制系统，因为每个开发人员或服务器使用你的应用程序可能需要不同的环境配置。  
 
-- 检查环境变量
-> $ php artisan env
+- 检查环境变量   
+> $ php artisan env  
 Current application environment: local  
 - 检查主机名称
 > $ hostanem
