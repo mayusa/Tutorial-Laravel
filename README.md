@@ -147,7 +147,8 @@ Migrated: 2014_10_12_100000_create_password_resets_table
 Rolled back: 2014_10_12_100000_create_password_resets_table
 Rolled back: 2014_10_12_000000_create_users_table  
 
-#####create table(Laravel4模式，Laravel5由'php artisan make:model Modelname'来创建)
+#####create table  
+(Laravel4模式，Laravel5由model部分来自动创建：'php artisan make:model Modelname'来创建)
 > $ php artisan make:migration create_users_table
 Created Migration: 2015_03_11_185858_create_users_table    
  
