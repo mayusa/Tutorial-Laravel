@@ -19,10 +19,10 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
   - __mac 安装 composer方法：__  
 ```
 	$ curl -sS https://getcomposer.org/installer | php
-	$ mv composer.phar /usr/local/bin/composer   
-
-Then, just run "composer" in order to run Composer instead of "php composer.phar".
+	$ mv composer.phar /usr/local/bin/composer    
 ```
+    - Then, just run "composer" in order to run Composer instead of "php composer.phar".
+
  - __composer 安装依赖步骤：__   
 
 
