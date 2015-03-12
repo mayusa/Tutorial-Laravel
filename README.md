@@ -14,13 +14,24 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
 
 - 为了方便开发，最省事的安装扩展的方法就是，下载[xampp](https://www.apachefriends.org/download.html), 将xampp的php路径加到用户环境变量`~/.bash_profile`。这样所有所需的php扩展基本都全了。省去折腾安装扩展的烦恼~！  
 
-**1.2 [Composer](https://getcomposer.org/)**
+**1.2 [Composer](https://getcomposer.org/)**  
+
+  - __mac 安装 composer方法：__  
 ```
-mac 安装 composer方法：  
 	$ curl -sS https://getcomposer.org/installer | php
-	$ mv composer.phar /usr/local/bin/composer  
+	$ mv composer.phar /usr/local/bin/composer   
+
 Then, just run "composer" in order to run Composer instead of "php composer.phar".
 ```
+ - __composer 安装依赖步骤：__   
+
+
+    - 在composer.json添加依赖名称
+`require": { "monolog/monolog": "1.2.*" }`
+    - 在项目根目录执行teminal命令： `$ composer install`
+    - 注意： composer安装依赖过程中，可能会报错：`SSL3_GET_SERVER_CERTIFICATE:certificate verify failed`
+[PHP 5.6 SSL certificate verification 问题解决](http://www.tuicool.com/articles/YnqMviE)  
+
 **1.3 Web server**
 **1.4 资料库 (与Client App)**
 **1.5 IDE, source control**
@@ -88,6 +99,7 @@ Application is now in maintenance mode.
 Application key [5ed1UVo4*************RlNjBWFo] set successfully.    
 
 #####修改app名称
+
 > php artisan app:name yourAppName
 Application namespace set!  
 
@@ -158,6 +170,71 @@ Created Migration: 2015_03_11_201816_create_articles_table
 
    
 - __数据库迁移__ 
+接下来进行 `Article类`对应的 `articles表` 的数据库迁移，进入 `/databases/migrations` 文件夹。 在*_create_articles_table.php中修改：
+```
+public function up()
+{
+	Schema::create('articles', function(Blueprint $table)
+	{
+		$table->increments('id');
+		$table->string('title');
+		$table->string('slug')->nullable();
+		$table->text('body')->nullable();
+		$table->string('image')->nullable();
+		$table->integer('user_id');
+		$table->timestamps();
+	});
+}
+```
+然后，执行命令
+> $ php artisan migrate  
+Migrated: 2015_03_11_201816_create_articles_table  
+
+	- 成功后，articles表已经出现在了数据库中。
+
+####3.6 Seeder   
+- 数据库填充文件seed路径： /database/seeds/{seeder}.php
+	- __在开发时，需要使用mock数据进行测试__
+	- __通过Laravel的table seeder,可以快速将mock资料加入DB， 方便开发CRUD功能__
+
+- /databases/seeds/ 下新建 ArticleTableSeeder.php 文件，内容如下：  
+
+		<?php
+		use Illuminate\Database\Seeder;  
+		use App\Article;
+
+		class PageTableSeeder extends Seeder {
+
+		  public function run()
+		  {
+    		// 每次添加mock数据不要累加
+		    DB::table('articles')->truncate();
+		    // 不要使用delete(), id 会累加
+		    //DB::table('articles')->delete();
+
+		    foreach (range(1, 10) as $i => $value) {
+		      Article::create([
+		        'title'   => 'Title '.$i,
+		        'slug'    => 'first-page',
+		        'body'    => 'Body '.$i,
+		        'user_id' => 2,
+		      ]);
+		    }
+		  }
+		}
+
+- 然后修改同一级目录下的 DatabaseSeeder.php中：   
+
+		$this->call('ArticleTableSeeder');   
+
+- 然后运行命令进行数据填充：   
+
+     >$ composer dump-autoload  
+     Generating autoload files
+     >$ php artisan db:seed 
+     >Seeded: ArticleTableSeeder
+
+ - 10条数据将保存在数据库中  
 
 
 
@@ -175,7 +252,8 @@ Created Migration: 2015_03_11_201816_create_articles_table
 [Composer中国镜像](http://pkg.phpcomposer.com/)  
 [Laravel5系列入门教程](http://www.golaravel.com/post/laravel-5-getting-started-part-1/)  
 [Laravel 4.x & 5.x中文离线文档](http://www.golaravel.com/post/laravel-documents-offline-package/)   
-[深入理解Laravel Eloquent](http://lvwenhan.com/laravel/421.html)  
+[深入理解Laravel Eloquent](http://lvwenhan.com/laravel/421.html)   
+[PHP 5.6 SSL certificate verification 问题解决](http://www.tuicool.com/articles/YnqMviE)
 
 ***
 ashucn@gmail.com
