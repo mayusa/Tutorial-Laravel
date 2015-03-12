@@ -3,7 +3,7 @@
 [The PHP Framework For Web Artisans](http://laravel.com/)  
 
 -------------------
-Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构，大量使用Symfony元件。
+Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构，大量使用Symfony元件。
 -------------------
 
 ###1.开发环境需求
@@ -205,7 +205,7 @@ Migrated: 2015_03_11_201816_create_articles_table
 ####3.6 Seeder   
 - 数据库填充文件seed路径： /database/seeds/{seeder}.php
 	- __在开发时，需要使用mock数据进行测试__
-	- __通过Laravel的table seeder,可以快速将mock资料加入DB， 方便开发CRUD功能__
+	- __通过Laravel的table seeder,可以快速将mock资料加入DB， 方便开发测试CRUD功能__
 
 - /databases/seeds/ 下新建 ArticleTableSeeder.php 文件，内容如下：  
 
@@ -295,11 +295,17 @@ Migrated: 2015_03_11_201816_create_articles_table
 
 
 ####3.9 Controller  
+路径：/app/Http/Controllers/{controller}.php  
+```
+优点：  
+  -  将复杂的操作逻辑，从Route 搬到Controller以Class的方式进行分类，方便维护   
+  -  Controller本身即IoC Container(反转控制),可自动DI(Dependency injection依赖注入) 
+``` 
+#####生成Controller方法：  
 > $php artisan make:controller Admin/AdminHomeController  
 
 得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
 
-/resources/views/{view}.blade.php
 
 (not finished..)  
   
