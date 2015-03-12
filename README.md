@@ -24,7 +24,7 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
     - Then, just run "composer" in order to run Composer instead of "php composer.phar".  
     
 
- - __composer 安装依赖步骤：__   
+  - __composer 安装依赖步骤：__   
 
 
     - 在composer.json添加依赖名称
