@@ -22,7 +22,7 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
 		$ mv composer.phar /usr/local/bin/composer    
  
     - Then, just run "composer" in order to run Composer instead of "php composer.phar".  
-    
+
 
   - __composer 安装依赖步骤：__   
 
@@ -228,20 +228,60 @@ Migrated: 2015_03_11_201816_create_articles_table
 
 		$this->call('ArticleTableSeeder');   
 
-- 然后运行命令进行数据填充：   
+- 数据填充方法1： 运行命令：   
 
+     >$ composer dump-autoload  
+     Generating autoload files
+     >$ php artisan db:seed 
+     >Seeded: ArticleTableSeeder  
+
+
+    - 10条数据将保存在数据库中  
+
+- 数据填充方法2：使用[Facker](https://packagist.org/packages/fzaninotto/faker )填充随机数据生成器(安装facker方法参考前面1.2)
+修改ArticleTableSeeder.php  
+
+		<?php
+
+		use Illuminate\Database\Seeder;  
+		use May\Article;
+		use Faker\Factory as Faker; // 添加1
+
+		class ArticleTableSeeder extends Seeder {
+
+		  public function run()
+		  {
+		    DB::table('articles')->truncate();
+
+		    $faker = Faker::create();// 添加2
+
+		    foreach (range(1, 10) as $i => $value) {
+		      Article::create([
+		        'title'   => **$faker->sentence($nbWords = 6),// 修改1
+		        'slug'    => 'first-post',
+		        'body'    => **$faker->paragraph($nbSentences = 5),// 修改2
+		        'user_id' => 1,
+		      ]);
+		    }
+		  }
+		}  
+
+    - 再运行命令进行数据填充：
      >$ composer dump-autoload  
      Generating autoload files
      >$ php artisan db:seed 
      >Seeded: ArticleTableSeeder
 
- - 10条数据将保存在数据库中  
+    - 10条随机mock数据将保存在数据库中  
 
 
 
 
 
-(not finished..)
+(not finished..)  
+  
+
+    
 ###Resource
 ---
 [Laravel英文官网](http://laravel.com/)  
