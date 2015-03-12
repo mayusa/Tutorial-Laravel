@@ -33,10 +33,10 @@ Laravel Framework 参考了Ruby on Rials， ASP.NET MVC及Sinatra语法和架构
     - 注意： composer安装依赖过程中，可能会报错：`SSL3_GET_SERVER_CERTIFICATE:certificate verify failed`
 [PHP 5.6 SSL certificate verification 问题解决](http://www.tuicool.com/articles/YnqMviE)  
 
-**1.3 Web server**
-**1.4 资料库 (与Client App)**
-**1.5 IDE, source control**
-**1.6 Web browser**
+**1.3 Web server**  
+**1.4 资料库 (与Client App)**  
+**1.5 IDE, source control**  
+**1.6 Web browser**  
 
 ###2.建立开发环境
 ---
