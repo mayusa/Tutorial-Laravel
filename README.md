@@ -38,7 +38,7 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 
     - 在composer.json添加依赖名称
 `require": { "monolog/monolog": "1.2.*" }`
-    - 在项目根目录执行teminal命令： `$ composer install`
+    - 在项目根目录执行teminal命令： `$ composer update`
     - 注意： composer安装依赖过程中，可能会报错：`SSL3_GET_SERVER_CERTIFICATE:certificate verify failed`
 [PHP 5.6 SSL certificate verification 问题解决](http://www.tuicool.com/articles/YnqMviE)  
 
