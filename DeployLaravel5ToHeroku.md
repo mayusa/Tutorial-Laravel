@@ -25,10 +25,14 @@ c. Deploy your application
 >$ git push heroku master  
 
 ####2. 创建laravel5包(要在其他文件夹中创建和初始化laravel)  
-a. 创建laravel   
+a. 创建laravel 5   
 >$ laravel new laraveldemo  
 >$ cd laraveldemo  
 >$ composer update   
+
+PS: 创建 laravel 4  
+>$ composer create-project laravel/laravel project-name ~4.2.0 --prefer-dist $ composer install
+
 
 
 b. 将laraveldemo中所有文件复制到heroku的项目中  
