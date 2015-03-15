@@ -52,7 +52,7 @@ b. 在teminal项目根目录下执行命令
 
 ####5.Demo  
 
-thhp://npuhms.herokuapp.com
+http://npuhms.herokuapp.com
   
   
   
