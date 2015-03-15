@@ -49,6 +49,11 @@ b. 在teminal项目根目录下执行命令
 >$ git add --all  
 >$ git commit -m "Initial commit of stock Laravel install."  
 >$ git push heroku master   
+
+####5.Demo  
+
+thhp://npuhms.herokuapp.com
+  
   
   
 ---
