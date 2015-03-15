@@ -370,7 +370,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 [laracasts 教学视频](https://laracasts.com/)  
 [tut+ 教学视频](http://tutsplus.com)   
 [Laravel dojo-台湾](http://www.laravel-dojo.com/)  
-[Laravel 4 Generators](https://github.com/JeffreyWay/Laravel-4-Generators)
+[Laravel 5 视频教学 laravel from scratch](https://www.youtube.com/watch?v=y_Prz9s7mE0&index=11&list=PLEJNIa_URo5UJeUq6wUEPmPzbgRUd_ZcE)
 
 ***
 ashucn@gmail.com
