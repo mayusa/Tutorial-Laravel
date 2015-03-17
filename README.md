@@ -1,7 +1,7 @@
 ![Laravel](http://www.easysitenetwork.com/wp-content/uploads/2013/02/learninglaravel.png) 
 
-[The PHP Framework For Web Artisans](http://laravel.com/)  
-
+[The PHP Framework For Web Artisans](http://laravel.com/)   
+建议使用Homestead方式安装laravel环境~~~ (3/16/2015)
 -------------------
 Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构，大量使用Symfony元件。
 -------------------
