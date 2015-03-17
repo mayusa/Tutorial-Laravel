@@ -136,7 +136,7 @@ subl ~/.basn_profile
 ```
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 ```
-之后你就可以执行 ** `vm` ** 命令来通过 SSH 进入 Homestead 虚拟机。  
+之后你就可以执行  `vm`  命令来通过 SSH 进入 Homestead 虚拟机。  
 
 ####4.2 连接数据库  
 在 `Homestead` 封装包中， `Laravel` 的 `local` 数据库配置已经默认将其配置完成   
@@ -145,7 +145,7 @@ alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 - 连接 `MySQL` : `127.0.0.1` 的端口 `33060`       
 - 连接`Postgres` : `127.0.0.1` 的端口 `54320`    
-- DB帐号密码: ** `homestead / secret` **    
+- DB帐号密码:  `homestead / secret`      
 
 **注意：** 在 Laravel 的数据库配置文件中依然是配置使用默认的 3306 及 5432 连接端口
 
