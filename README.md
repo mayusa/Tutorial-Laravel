@@ -52,6 +52,9 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 
 ###2.建立开发环境
 ---
+  
+推荐使用的IDE： [PhpStorm - 如何配置](https://confluence.jetbrains.com/display/PhpStorm/Laravel+Development+using+PhpStorm#LaravelDevelopmentusingPhpStorm-Prerequisites%28plugininstallationandconfiguration%29)
+
 **2.1 All in one 套件( beginner )**  
 **2.2 Homestead(熟悉laravel)**  
 **2.3 自建开发环境 (advanced)**  
