@@ -33,7 +33,21 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 		$ curl -sS https://getcomposer.org/installer | php
 		$ mv composer.phar /usr/local/bin/composer    
  
-    - Then, just run "composer" in order to run Composer instead of "php composer.phar".  
+    - Then, just run "composer" in order to run Composer instead of "php composer.phar".    
+
+    将依赖包路径加入环境变量$PATH:    
+
+	编辑~/.bash_profiel    
+
+		
+		subl ~/.basn_profile
+		
+
+	添加一行  
+
+		
+		export PATH=~/.composer/vendor/bin:$PATH
+		
 
 
   - __composer 安装依赖步骤：__   
