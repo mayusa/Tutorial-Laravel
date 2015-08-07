@@ -81,7 +81,7 @@ folders:
 ####3.7 配置 Nginx 站点   
 `sites` 属性允许你简单的对应一个 域名 到一个 `homestead`环境中的目录。一个例子的站点被配置在 `Homestead.yaml` 文件中。同样的，你可以加任何你需要的站点到你的 `Homestead` 环境中。`Homestead` 可以为你每个进行中的 `Laravel` 应用提供方便的虚拟化环境。
 
-你可以通过配置 `hhvm` 属性为 `true` 来让虚拟站点支持 `HHVM`:
+你可以通过配置 `hhvm` 属性为 `true` 来让虚拟站点支持 `HHVM`:（如果不明确HHVM请不要加，否则访问网站会报520错误）
 
 ```
 sites:
