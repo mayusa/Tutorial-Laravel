@@ -3,7 +3,7 @@
 ###() Cerate an unbuntu server instance on EC2   
 aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group policy - > save the secret key  
 ###() Ssh to the server  
- 
+>ssh -i keyname.pem ubuntu@52.8.**.**
 
 ###() Configure the Ubuntu environment for hosting   
 >sudo apt-get update --fix-missing  
@@ -19,10 +19,10 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 
 >sudo apt-get install git-core  
 >curl -sS https://getcomposer.org/installer | php  
->mv composer.phar /usr/local/bin/composer  
 >sudo mv composer.phar /usr/local/bin/composer   
->sudo git clone https://valsfer@bitbucket.org/valsfer/valsfer-test.git  
->cd valsfer-test/  
+>sudo git clone https://sitename@bitbucket.org/sitename/sitename-test.git  
+>cd sitename/  
+>sudo mkdir vendor
 >sudo apt-get install php5-curl  
 >sudo apt-get install php5-mysql  
 
@@ -32,8 +32,8 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 ###() change DocumentRoot /var/www/html to whatever your location and add AllowOverride as bellow    
 ```
 	ServerAdmin webmaster@localhost  
-	DocumentRoot /var/www/valsfer-test/public
-	<Directory "/var/www/valsfer-test/public">
+	DocumentRoot /var/www/sitename/public
+	<Directory "/var/www/sitename/public">
 		AllowOverride All
 	</Directory>
 ```   
@@ -43,8 +43,8 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 
 >sudo find app/storage -type d -exec chmod 777 {} \;  
 >sudo find app/storage -type f -exec chmod 777 {} \;  
->sudo chmod 777 -R /var/www/valsfer-test/public/image/projects/  
->sudo chmod 777 -R /var/www/valsfer-test/public/users/image/  
+>sudo chmod 777 -R /var/www/sitename/public/image/projects/  
+>sudo chmod 777 -R /var/www/sitename/public/users/image/  
 
 
 ###() Also need to migrate and seed the database  
