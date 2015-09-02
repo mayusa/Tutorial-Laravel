@@ -27,7 +27,7 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 >sudo apt-get install php5-mysql  
 
 >sudo composer update  
->vi /etc/apache2/sites-available/000-default.conf     
+>sudo vi /etc/apache2/sites-available/000-default.conf     
 
 ###() change DocumentRoot /var/www/html to whatever your location and add AllowOverride as bellow    
 ```
