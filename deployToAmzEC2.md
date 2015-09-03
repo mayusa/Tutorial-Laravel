@@ -22,7 +22,7 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 >sudo mv composer.phar /usr/local/bin/composer   
 >sudo git clone https://sitename@bitbucket.org/sitename/sitename-test.git  
 >cd sitename/  
->sudo mkdir vendor
+>sudo mkdir vendor  
 >sudo apt-get install php5-curl  
 >sudo apt-get install php5-mysql  
 
