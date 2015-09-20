@@ -192,6 +192,8 @@ blackfire:
       token: your-token
 ```  
 
+###7. phpstorm + vagrant + xdebug
+http://www.sitepoint.com/install-xdebug-phpstorm-vagrant/
 
 
 ---
