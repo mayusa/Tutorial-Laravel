@@ -1,4 +1,4 @@
-##How to setup Laravel Homestead  
+##How to setup Laravel Homestead  & Using xdebug
 
 http://laravel.com/docs/5.0/homestead   
 
@@ -193,10 +193,10 @@ blackfire:
 ```  
 
 ###7. phpstorm + vagrant + xdebug
-http://www.sitepoint.com/install-xdebug-phpstorm-vagrant/
-我的配置：
-xdebug端口设为 9000
-homestead app网页端口设为默认的 80，而不是8000
+http://www.sitepoint.com/install-xdebug-phpstorm-vagrant/  
+我的配置：  
+xdebug端口设为 9000  
+homestead app网页端口设为默认的 80，而不是8000  
 
 
 ---
