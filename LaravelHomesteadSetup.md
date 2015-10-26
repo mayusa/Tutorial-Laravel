@@ -33,19 +33,19 @@ Homestead 目前是构建且测试于 Vagrant 1.7 版本。
 >$ vagrant box add laravel/homestead   
 
 ####3.3 安装 Homestead(两种方式)   
+请务必确认 `~/.composer/vendor/bin` 已经加入环境变量PATH之中，如此一来你才能在终端机中顺利执行 `homestead` 命令。  
 
 - __方法1：手动通过 Git 安装（本地端没有 PHP）__   
 如果你不希望在你的本机上安装 PHP ，你可以简单地通过手动复制资源库的方式来安装 Homestead。将资源库复制至你的 "home" 目录中的 Homestead 文件夹，如此一来 Homestead 封装包将能提供主机服务给你所有的 Laravel（及 PHP）应用:  
 >$ git clone https://github.com/laravel/homestead.git Homestead   
-
-    一旦你安装完 Homestead CLI 工具，即可执行 bash init.sh 命令来创建 Homestead.yaml 配置文件:   
-  >$ bash init.sh    
-
+一旦你安装完 Homestead CLI 工具，即可进入Homestead文件夹，执行 bash init.sh 命令来创建 Homestead.yaml 配置文件:   
+>$ bash init.sh    
+    
 - __方法2：通过 Composer + PHP 工具__   
 一旦封装包已经安装进你的 Vagrant 安装程序，你就可以准备通过 `Composer global` 命令来安装 `Homestead CLI` 工具：  
 >$ composer global require "laravel/homestead=~2.0"    
 
-    请务必确认 `homestead` 被放置在目录 `~/.composer/vendor/bin` 之中，如此一来你才能在终端机中顺利执行 `homestead` 命令。  
+      
     一旦你安装完 `Homestead CLI` 工具，即可执行 `init` 命令来创建 `Homestead.yaml` 配置文件:  
     >$ homestead init  
 
