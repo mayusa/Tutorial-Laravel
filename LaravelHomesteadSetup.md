@@ -1,4 +1,4 @@
-##How to setup Laravel Homestead  & Using xdebug
+##How to setup Laravel Homestead & Using xdebug
 
 http://laravel.com/docs/5.0/homestead   
 
@@ -198,6 +198,8 @@ http://www.sitepoint.com/install-xdebug-phpstorm-vagrant/
 xdebug端口设为 9000  
 homestead app网页端口设为默认的 80，而不是8000  
 
+###8. window10 + homestead    
+[windows10-vagrant-virtualbox-homestead](https://laracasts.com/discuss/channels/general-discussion/windows-10-vagrant-virtualbox-homestead)    
 
 ---
 ashucn@gmail.com 3/17/2015  
