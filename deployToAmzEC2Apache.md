@@ -15,9 +15,6 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 >sudo apt-get install php5-mcrypt  
 >sudo apt-get install mysql-server     
 
-###(3-b) Configure the Ubuntu environment for hosting(nginx + FastCGI)    
-https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-an-nginx-web-server-on-ubuntu-14-04
-
 
 ###use root to make it same as asan, otherwise it will not work since there are many places hard-coded root root to be the db userID and password. Need to improve  
 
