@@ -1,9 +1,9 @@
 ##How to Install Laravel with an Nginx Web Server on Ubuntu 14.04   
 
-###1. Install the Backend Components  
+###1. Install the Backend Components  安装服务器后端组件
 ````  
 sudo apt-get update    
-sudo apt-get install nginx php5-fpm php5-cli php5-mcrypt git  
+sudo apt-get install nginx php5-fpm php5-cli php5-mcrypt php5-curl git  mysql-server php5-mysql
 ````  
 
 ###2. Modify the PHP Configuration  
