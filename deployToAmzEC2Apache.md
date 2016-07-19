@@ -39,7 +39,7 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 	</Directory>
 ```   
 
->sudo a2enmod rewrite  
+>sudo a2enmod rewrite  // this for url router
 >sudo service apache2 restart  
 
 >sudo find app/storage -type d -exec chmod 777 {} \;  
