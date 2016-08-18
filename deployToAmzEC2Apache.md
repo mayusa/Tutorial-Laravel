@@ -42,8 +42,8 @@ aws- > EC2 -> Launch Instance - > Select Ubuntu -> Define your security group po
 >sudo a2enmod rewrite  // this for url router  
 >sudo service apache2 restart  
 
->sudo find app/storage -type d -exec chmod 777 {} \;  
->sudo find app/storage -type f -exec chmod 777 {} \;  
+>sudo find storage -type d -exec chmod 777 {} \;  
+>sudo find storage -type f -exec chmod 777 {} \;  
 >sudo chmod 777 -R /var/www/sitename/public/image/projects/  
 >sudo chmod 777 -R /var/www/sitename/public/users/image/  
 
