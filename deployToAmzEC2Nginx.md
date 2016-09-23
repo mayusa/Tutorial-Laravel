@@ -19,7 +19,7 @@ This tells PHP not to try to execute a similar named script if the requested fil
 ####Enable the MCrypt extension, which Laravel depends on  
     sudo php5enmod mcrypt  
   
-####Restart the php5-fpm service, implement the PHP config changes:  
+####Restart the php5-fpm service, implement the PHP config changes:  (可以安装PHP7,need update the MD file 2016.9.22)
     sudo service php5-fpm restart  
 
 
