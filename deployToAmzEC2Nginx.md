@@ -68,5 +68,7 @@ sudo mv composer.phar /usr/local/bin/composer
 Change the permissions of the /var/www/yourapp/storage directory to allow the web group write permissions. This is necessary for the application to function correctly:  
 
     sudo chmod -R 775 /var/www/yourapp/storage   
+    sudo find storage -type d -exec chmod 777 {} \;  
+    sudo find storage -type f -exec chmod 777 {} \;  
 
 
