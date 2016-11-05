@@ -22,8 +22,8 @@
 22  cd /var/www/yourapp  
 23  sudo composer update  
   
-# To get a list of packages installed locally do this in your terminal:  
+### To get a list of packages installed locally do this in your terminal:  
 dpkg --get-selections | grep -v deinstall  
 
-# To get a list of a specific package installed:  
+### To get a list of a specific package installed:  
 dpkg --get-selections | grep postgres  
