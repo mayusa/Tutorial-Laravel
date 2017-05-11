@@ -1,7 +1,7 @@
 ![Laravel](http://www.easysitenetwork.com/wp-content/uploads/2013/02/learninglaravel.png) 
 
 [The PHP Framework For Web Artisans](http://laravel.com/)   
-#####建议使用Homestead方式安装laravel环境~~~ (3/16/2015)   
+##### 建议使用Homestead方式安装laravel环境~~~ (3/16/2015)   
 
   
 
@@ -18,7 +18,7 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 
 
 
-###1.开发环境需求
+### 1.开发环境需求
 ---
 **1.1 PHP**(PHP>=5.4  and extensions: Mcrypt, OpenSSL,Mbstring,Tokenizer)  
 
@@ -64,7 +64,7 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 **1.5 IDE, source control**  
 **1.6 Web browser**  
 
-###2.建立开发环境
+### 2.建立开发环境
 ---
   
 推荐使用的IDE： [PhpStorm - 如何配置](https://confluence.jetbrains.com/display/PhpStorm/Laravel+Development+using+PhpStorm#LaravelDevelopmentusingPhpStorm-Prerequisites%28plugininstallationandconfiguration%29)
@@ -74,7 +74,7 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 **2.3 自建开发环境 (advanced)**  
  
 
-###[install Laravel](http://laravel.com/docs/5.0/installation)
+### [install Laravel](http://laravel.com/docs/5.0/installation)
 > $composer global require "laravel/installer=~1.1"
 
 add ` ~/.composer/vendor/bin` directory to PATH (Linux)
@@ -83,9 +83,9 @@ add ` ~/.composer/vendor/bin` directory to PATH (Linux)
 检查laravel安装是否成功：
 > $ laravel -v
 
-###3.创建和管理项目  
+### 3.创建和管理项目  
 ---
-####3.1 Installation  
+#### 3.1 Installation  
 
 根据你所在的目录，执行**laravel**
 > $ laravel new blog  
@@ -99,7 +99,7 @@ add ` ~/.composer/vendor/bin` directory to PATH (Linux)
 >$ composer create-project laravel/laravel your-project-name dev-develop --prefer-dist  
 
 ##  
-####3.2 Artisan(本义：工匠)
+#### 3.2 Artisan(本义：工匠)
 > $ php artisan {command}   
 
 Laravel 专属指令工具，协助完成日常繁琐工作事务，比如：  
@@ -107,49 +107,49 @@ Laravel 专属指令工具，协助完成日常繁琐工作事务，比如：
 - 产生migration, 控制queue
 - 维护模式
 
-#####启动web server  
+##### 启动web server  
 
 > $ php artisan **serve**    
 
-#####关闭web server  
+##### 关闭web server  
 
 > $ Ctrl + c   
 
-#####启动 application  
+##### 启动 application  
 
 > $ php artisan up
 > Application is now live.  
 
-#####暂停 application(首页显示: 'Be right back.')
+##### 暂停 application(首页显示: 'Be right back.')
 > $ php artisan down
 Application is now in maintenance mode.    
 
-#####生成key
+##### 生成key
 > $ php artisan key:generate
 Application key [5ed1UVo4*************RlNjBWFo] set successfully.    
 
-#####修改app名称
+##### 修改app名称
 
 > php artisan app:name yourAppName
 Application namespace set!  
 
   执行完这个命令之后, app/ 目录下的所有类都被归入 "yourAppName" 命名空间下. composer.json 文件里的 PSR-4 自动加载语句会自动更新, Laravel 也清楚应该在哪里去寻找该命名空间下的 filters, controlers 等
-####3.3 Configuration 配置Laravel  
+#### 3.3 Configuration 配置Laravel  
 
-#####- `/app/comfig/{config}.php` :  
+##### - `/app/comfig/{config}.php` :  
 
   - **app.php** (debug mode, service provider...)
   - **database.php** (mysql...)
   - **mail.php** (gmail, mailgun...)
   - **queue.php** (beanstalkd...)  
 
-#####- 服务器的root指向`/public`  
+##### - 服务器的root指向`/public`  
 
-#####- 开发流程： 代码统一由`github`来控制,不管是在本地还是取出远程代码，复制`/config`下所有文件即可完成对laravel配置   
+##### - 开发流程： 代码统一由`github`来控制,不管是在本地还是取出远程代码，复制`/config`下所有文件即可完成对laravel配置   
 
-#####- Laravel自动监测环境： `/bootstrap/start.php`  
+##### - Laravel自动监测环境： `/bootstrap/start.php`  
 
-#####- Laravel环境配置：   
+##### - Laravel环境配置：   
 
 Laravel 通过 [DotEnv](https://github.com/vlucas/phpdotenv) Vance Lucas 写的一个 PHP 类库。 在全新安装好的 Laravel 里，你的应用程序的根目录下会包含一个 `.env.example` 文件。如果你通过 Composer 安装 Laravel，这个文件将自动被命名为 `.env`，不然你应该手动更改文件名。  
 **注意：** `.env` 文件不应该被提交到应用程序的版本控制系统，因为每个开发人员或服务器使用你的应用程序可能需要不同的环境配置。  
@@ -171,7 +171,7 @@ DB_USERNAME=root
 DB_PASSWORD=password 
 ```
 
-####3.4 Migration (适合多人开发的数据库管理) 
+#### 3.4 Migration (适合多人开发的数据库管理) 
 Represent database schema changes in code
 目录： /database/migrations/***_table.php
 `public function up()`
@@ -184,12 +184,12 @@ Migrated: 2014_10_12_100000_create_password_resets_table
 Rolled back: 2014_10_12_100000_create_password_resets_table
 Rolled back: 2014_10_12_000000_create_users_table  
 
-#####create table  
+##### create table  
 (Laravel4模式，Laravel5由model部分来自动创建：'php artisan make:model Modelname'来创建)
 > $ php artisan make:migration create_users_table
 Created Migration: 2015_03_11_185858_create_users_table    
  
-####3.5 Model (Laravel最为强大的部分，Eloquent ORM)   
+#### 3.5 Model (Laravel最为强大的部分，Eloquent ORM)   
 ```
 - Laravel 里操作DB的ORM 是Eloquent
 - 一个Resource 对应DB里的一个table
@@ -231,7 +231,7 @@ Migrated: 2015_03_11_201816_create_articles_table
 
 	- 成功后，articles表已经出现在了数据库中。
 
-####3.6 Seeder   
+#### 3.6 Seeder   
 - 数据库填充文件seed路径： /database/seeds/{seeder}.php
 	- __在开发时，需要使用mock数据进行测试__
 	- __通过Laravel的table seeder,可以快速将mock资料加入DB， 方便开发测试CRUD功能__
@@ -313,17 +313,17 @@ Migrated: 2015_03_11_201816_create_articles_table
     - 10条随机mock数据将保存在数据库中  
 
 
-####3.7 Route  
+#### 3.7 Route  
 /app/Http/routes.php
 
 
 
-####3.8 View  
+#### 3.8 View  
 /resources/views/{view}.blade.php  
 
 
 
-####3.9 Controller  
+#### 3.9 Controller  
  - 路径：/app/Http/Controllers/{controller}.php  
 ```
 优点：  
@@ -336,7 +336,7 @@ Migrated: 2015_03_11_201816_create_articles_table
 
 	得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
 
-#####[ 代码范例 ]  
+##### [ 代码范例 ]  
 
  - 修改route (/app/Http/routes.php)  
 ```
@@ -354,11 +354,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
   
 
 
-####3.10 Package
+#### 3.10 Package
 	- 概念同Symfony的Bundle, Rails的Gem, Node的npm
 	- Laravel的扩充，通过package可以直接使用现成的功能，加快开发速度
 	- package搜索: Laravel Packages Registry; Packalyst  
-#####安装使用步骤：
+##### 安装使用步骤：
  - Readme
  - 调整 composer.json/composer update
  - 设定ServiceProvider / Alias
