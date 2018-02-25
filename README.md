@@ -30,24 +30,24 @@ Laravel Framework 参考了Ruby on Rails， ASP.NET MVC及Sinatra语法和架构
 
   - __mac 安装 composer方法：__  
 
-		$ curl -sS https://getcomposer.org/installer | php
-		$ mv composer.phar /usr/local/bin/composer    
+        $ curl -sS https://getcomposer.org/installer | php
+        $ mv composer.phar /usr/local/bin/composer    
  
     - Then, just run "composer" in order to run Composer instead of "php composer.phar".    
 
     将依赖包路径加入环境变量$PATH:    
 
-	编辑~/.bash_profiel    
+    编辑~/.bash_profiel    
 
-		
-		subl ~/.basn_profile
-		
+        
+        subl ~/.basn_profile
+        
 
-	添加一行  
+    添加一行  
 
-		
-		export PATH=~/.composer/vendor/bin:$PATH
-		
+        
+        export PATH=~/.composer/vendor/bin:$PATH
+        
 
 
   - __composer 安装依赖步骤：__   
@@ -204,8 +204,8 @@ Laravel 4 时代，我们使用 Generator 插件来新建 Model。现在，Larav
 Model created successfully.
 Created Migration: 2015_03_11_201816_create_articles_table
 
-	- 现在，Artisan 帮我们在 learnlaravel5/app/ 下创建了Article.php ，这是一个 Model 类，继承了 Laravel Eloquent 提供的 Model 类 Illuminate\Database\Eloquent\Model，且在 \App 命名空间下。  
-	- 这里需要强调一下，用命令行的方式创建文件，和 __自己手动创建文件__ 没有任何区别，你也可以尝试自己创建这个 Model 类
+    - 现在，Artisan 帮我们在 learnlaravel5/app/ 下创建了Article.php ，这是一个 Model 类，继承了 Laravel Eloquent 提供的 Model 类 Illuminate\Database\Eloquent\Model，且在 \App 命名空间下。  
+    - 这里需要强调一下，用命令行的方式创建文件，和 __自己手动创建文件__ 没有任何区别，你也可以尝试自己创建这个 Model 类
 
    
 - __数据库迁移__ 
@@ -213,58 +213,58 @@ Created Migration: 2015_03_11_201816_create_articles_table
 ```
 public function up()
 {
-	Schema::create('articles', function(Blueprint $table)
-	{
-		$table->increments('id');
-		$table->string('title');
-		$table->string('slug')->nullable();
-		$table->text('body')->nullable();
-		$table->string('image')->nullable();
-		$table->integer('user_id');
-		$table->timestamps();
-	});
+    Schema::create('articles', function(Blueprint $table)
+    {
+        $table->increments('id');
+        $table->string('title');
+        $table->string('slug')->nullable();
+        $table->text('body')->nullable();
+        $table->string('image')->nullable();
+        $table->integer('user_id');
+        $table->timestamps();
+    });
 }
 ```
 然后，执行命令
 > $ php artisan migrate  
 Migrated: 2015_03_11_201816_create_articles_table  
 
-	- 成功后，articles表已经出现在了数据库中。
+    - 成功后，articles表已经出现在了数据库中。
 
 #### 3.6 Seeder   
 - 数据库填充文件seed路径： /database/seeds/{seeder}.php
-	- __在开发时，需要使用mock数据进行测试__
-	- __通过Laravel的table seeder,可以快速将mock资料加入DB， 方便开发测试CRUD功能__
+    - __在开发时，需要使用mock数据进行测试__
+    - __通过Laravel的table seeder,可以快速将mock资料加入DB， 方便开发测试CRUD功能__
 
 - /databases/seeds/ 下新建 ArticleTableSeeder.php 文件，内容如下：  
 
-		<?php
-		use Illuminate\Database\Seeder;  
-		use App\Article;
+        <?php
+        use Illuminate\Database\Seeder;  
+        use App\Article;
 
-		class PageTableSeeder extends Seeder {
+        class PageTableSeeder extends Seeder {
 
-		  public function run()
-		  {
-    		// 每次添加mock数据不要累加
-		    DB::table('articles')->truncate();
-		    // 不要使用delete(), id 会累加
-		    //DB::table('articles')->delete();
+          public function run()
+          {
+            // 每次添加mock数据不要累加
+            DB::table('articles')->truncate();
+            // 不要使用delete(), id 会累加
+            //DB::table('articles')->delete();
 
-		    foreach (range(1, 10) as $i => $value) {
-		      Article::create([
-		        'title'   => 'Title '.$i,
-		        'slug'    => 'first-page',
-		        'body'    => 'Body '.$i,
-		        'user_id' => 2,
-		      ]);
-		    }
-		  }
-		}
+            foreach (range(1, 10) as $i => $value) {
+              Article::create([
+                'title'   => 'Title '.$i,
+                'slug'    => 'first-page',
+                'body'    => 'Body '.$i,
+                'user_id' => 2,
+              ]);
+            }
+          }
+        }
 
 - 然后修改同一级目录下的 DatabaseSeeder.php中：   
 
-		$this->call('ArticleTableSeeder');   
+        $this->call('ArticleTableSeeder');   
 
 - 数据填充方法1： 运行命令：   
 
@@ -279,30 +279,30 @@ Migrated: 2015_03_11_201816_create_articles_table
 - 数据填充方法2：使用[Facker](https://packagist.org/packages/fzaninotto/faker )填充随机数据生成器(安装facker方法参考前面1.2)
 修改ArticleTableSeeder.php  
 
-		<?php
+        <?php
 
-		use Illuminate\Database\Seeder;  
-		use May\Article;
-		use Faker\Factory as Faker; // 添加1
+        use Illuminate\Database\Seeder;  
+        use May\Article;
+        use Faker\Factory as Faker; // 添加1
 
-		class ArticleTableSeeder extends Seeder {
+        class ArticleTableSeeder extends Seeder {
 
-		  public function run()
-		  {
-		    DB::table('articles')->truncate();
+          public function run()
+          {
+            DB::table('articles')->truncate();
 
-		    $faker = Faker::create();// 添加2
+            $faker = Faker::create();// 添加2
 
-		    foreach (range(1, 10) as $i => $value) {
-		      Article::create([
-		        'title'   => **$faker->sentence($nbWords = 6),// 修改1
-		        'slug'    => 'first-post',
-		        'body'    => **$faker->paragraph($nbSentences = 5),// 修改2
-		        'user_id' => 1,
-		      ]);
-		    }
-		  }
-		}  
+            foreach (range(1, 10) as $i => $value) {
+              Article::create([
+                'title'   => **$faker->sentence($nbWords = 6),// 修改1
+                'slug'    => 'first-post',
+                'body'    => **$faker->paragraph($nbSentences = 5),// 修改2
+                'user_id' => 1,
+              ]);
+            }
+          }
+        }  
 
     - 再运行命令进行数据填充：
      >$ composer dump-autoload  
@@ -334,7 +334,7 @@ Migrated: 2015_03_11_201816_create_articles_table
   - 生成Controller方法：  
 > $php artisan make:controller Admin/AdminHomeController  
 
-	得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
+    得到 `/app/Http/Controllers/Admin/AdminHomeController.php` 文件。
 
 ##### [ 代码范例 ]  
 
@@ -355,9 +355,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 
 
 #### 3.10 Package
+
 	- 概念同Symfony的Bundle, Rails的Gem, Node的npm
 	- Laravel的扩充，通过package可以直接使用现成的功能，加快开发速度
 	- package搜索: Laravel Packages Registry; Packalyst  
+  
 ##### 安装使用步骤：
  - Readme
  - 调整 composer.json/composer update
@@ -372,7 +374,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
   
 
     
-###Resource
+### Resource
 ---
 [Laravel英文官网](http://laravel.com/)  
 [Composer](https://getcomposer.org/)  

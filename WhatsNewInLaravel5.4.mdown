@@ -1,0 +1,33 @@
+##[What's New in Laravel 5.4 ( laracasts.com )](https://laracasts.com/series/whats-new-in-laravel-5-4/episodes/1?autoplay=true)
+
+
+###01 Sanitizing Middleware 清理无用数据的中间件 1:44 
+
+
+###02 Higher Order Collection Messages 2:41 
+
+
+###03 Laravel Mix in a Nutshell 4:56 
+
+
+###04 Fluent Routing 1:07 05
+
+
+###05 Resourceful Controllers With Model Boilerplate 1:32 
+
+
+###06 Blade Components and Slots 5:19 
+
+
+###07 Markdown Mailables 4:25 
+
+
+###08 Real-Time Facades 2:29 
+
+
+###09 Browser Testing With Laravel Dusk 3:00 
+
+
+###10 Map Eloquent Events to Dedicated Classes 3:41
+
+
