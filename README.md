@@ -355,9 +355,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 
 
 #### 3.10 Package
-    - 概念同Symfony的Bundle, Rails的Gem, Node的npm
-    - Laravel的扩充，通过package可以直接使用现成的功能，加快开发速度
-    - package搜索: Laravel Packages Registry; Packalyst  
+
+	- 概念同Symfony的Bundle, Rails的Gem, Node的npm
+	- Laravel的扩充，通过package可以直接使用现成的功能，加快开发速度
+	- package搜索: Laravel Packages Registry; Packalyst  
+  
 ##### 安装使用步骤：
  - Readme
  - 调整 composer.json/composer update

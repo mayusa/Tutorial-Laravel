@@ -37,7 +37,7 @@ Homestead 目前是构建且测试于 Vagrant 1.7 版本。
     
 - __方法1(推荐！)：通过 Composer + PHP 工具__   
 一旦封装包已经安装进你的 Vagrant 安装程序，你就可以准备通过 `Composer global` 命令来安装 `Homestead CLI` 工具：  
->$ composer global require "laravel/homestead=~2.0"  //(不要用其他高级版本，因为缺少命令)      
+>$ composer global require "laravel/homestead=~2.0"  //(不要用其他高级版本，因为缺少命令 2016.8.28)      
 
 - __方法2：手动通过 Git 安装（本地端没有 PHP）__   
 如果你不希望在你的本机上安装 PHP ，你可以简单地通过手动复制资源库的方式来安装 Homestead。将资源库复制至你的 "home" 目录中的 Homestead 文件夹，如此一来 Homestead 封装包将能提供主机服务给你所有的 Laravel（及 PHP）应用:  
